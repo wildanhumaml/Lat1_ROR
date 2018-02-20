@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lat1ROR</title>
+    <title>Pragprog Books Online Store</title>
+    <%= csrf_meta_tags %>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class='<%= controller.controller_name %>'>
-    <%= yield %>
+  <body class="<%= controller.controller_name %>">
+    <div id="banner">
+    	<div id="img2"><%= image_tag 'logo.png', alt: 'The Pragprog Bookshelf', :size => "300x120" %></div>
+    	<span class="title"><%= @page_title %></span>
+    </div>
+    <div id="columns">
+	    <div id="side">
+	    	<ul>
+	    		<li><a href="#"><b>Home</b></a></li>
+	    		<li><a href="#"><b>Questions</b></a></li>
+	    		<li><a href="#"><b>News</b></a></li>
+	    		<li><a href="#"><b>Contact</b></a></li>
+	    	</ul>
+	    </div>
+	    <div id="main">
+	    	<%= yield %>
+	    </div>
+	</div>
   </body>
 </html>
