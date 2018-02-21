@@ -57,9 +57,10 @@ body, body > p, body > ol, body > li, body > ul, body > td {margin: 8px !importa
 }
 
 #side {
-			padding: 1em 4em 1em 1em;
+			padding: 1em 2em 1em 1em;
 			background: #141;
 			color: #ffffff;
+			width: 15%;
 
 			ul {
 				padding: 0;
