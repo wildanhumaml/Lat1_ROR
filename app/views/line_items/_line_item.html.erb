@@ -1,0 +1,9 @@
+<% if line_item == @current_item %>
+<tr id="current_item">
+<% else %>
+<tr>
+<% end %>
+	<td valign="top"><%= line_item.quantity %>&times;</td>
+	<td><%= line_item.product.title %> <br>(@<%= to_rupiah(line_item.product.price) %>)</td>
+	<td class="item_price" valign="top"><%= to_rupiah(line_item.total_price) %></td>
+</tr>

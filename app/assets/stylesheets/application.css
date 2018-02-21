@@ -60,7 +60,26 @@ body, body > p, body > ol, body > li, body > ul, body > td {margin: 8px !importa
 			padding: 1em 2em 1em 1em;
 			background: #141;
 			color: #ffffff;
-			width: 15%;
+			width: 25%;
+
+			form, div {
+				display: inline;
+			}
+
+			input {
+				font-size: small;
+			}
+
+			#cart {
+				font-size: smaller;
+				color: #ffffff;
+				
+				table {
+					border-top: 	1px dotted #595;
+					border-bottom: 	1px dotted #595;
+					margin-bottom: 	10px;
+				}
+			}
 
 			ul {
 				padding: 0;

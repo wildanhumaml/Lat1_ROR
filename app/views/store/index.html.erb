@@ -11,7 +11,8 @@
 			<p><span class="desc"><%= sanitize(product.description) %></span></p>
 			<div class="price_line">
 				<span class="price"><%= to_rupiah(product.price) %></span>
-				<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+				<!-- <%= button_to 'Add to Cart', line_items_path(product_id: product) %> -->
+				<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %> 
 			</div>
 		</div>
 		<% end %>
