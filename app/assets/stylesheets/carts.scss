@@ -11,10 +11,21 @@
 	.total_line .total_cell {
 		font-weight: bold;
 		border-top: 3px solid #595;
+		text-align: right;
 	}
 
 	#space {
 		text-align: right;
+	}
+
+	.top {
+		border-top: 1px dotted #ffffff;
+		border-bottom: 1px dotted #ffffff;
+		margin-bottom: 5px;	
+	}
+
+	.btm {
+		margin-bottom: 20px;
 	}
 
 }
