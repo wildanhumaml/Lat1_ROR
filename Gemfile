@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'webpacker', '~> 3.2'
+gem 'foreman'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -32,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+# gem 'webpacker', '~> 3.2'
+# gem 'webpacker', '~> 2.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
