@@ -6,6 +6,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag "translations", skip_pipeline: true %>
+    <script type="text/javascript">
+    	I18n.defaultLocale 	= "<%= I18n.default_locale %>";
+    	I18n.locale 		= "<%= I18n.locale %>";
+    	// I18n.fallbacks 		= true;
+    </script>
   </head>
 
   <body class="<%= controller.controller_name %>">
@@ -27,9 +33,9 @@
 
 	    	<ul>
 	    		<li><b><%= link_to 'Home', store_index_path %></b></li>
-	    		<li><a href="#"><b>Questions</b></a></li>
-	    		<li><a href="#"><b>News</b></a></li>
-	    		<li><a href="#"><b>Contact</b></a></li>
+	    		<li><b><a href="#"><%= t('.questions') %></a></b></li>
+	    		<li><b><a href="#"><%= t('.news') %></a></b></li>
+	    		<li><b><a href="#"><%= t('.contact') %></a></b></li>
 	    		<li><hr/></li>
 	    		<!-- <li><b><%= link_to 'Users', users_path %></b></li>
 	    		<li><b><%= link_to 'Products', products_path %></b></li> -->
