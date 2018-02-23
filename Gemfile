@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'webpacker', '~> 3.2'
+# gem 'webpacker', '~> 3.2'
+# gem 'webpacker', github: 'rails/webpacker' 
+gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 gem 'foreman'
 
 git_source(:github) do |repo_name|
