@@ -6,6 +6,7 @@ gem 'jquery-ui-rails'
 # gem 'webpacker', github: 'rails/webpacker' 
 gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 gem 'foreman'
+gem 'bcrypt', '~> 3.1.7'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
