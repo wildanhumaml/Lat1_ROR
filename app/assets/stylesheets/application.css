@@ -51,7 +51,7 @@ body, body > p, body > ol, body > li, body > ul, body > td {margin: 8px !importa
 	display: none;
 }
 
-	#columns {
+#columns {
 		background: #141;
 		display: flex;
 }
@@ -113,35 +113,40 @@ body, body > p, body > ol, body > li, body > ul, body > td {margin: 8px !importa
 	}
 }
 
-	label {
-		width: 10em;
-		float: left;
-		text-align: right;
-		padding-top: 0.2em;
-		margin-right: 0.1em;
-		display: block;
-	}
+label {
+	width: 10em;
+	float: left;
+	text-align: right;
+	padding-top: 0.2em;
+	margin-right: 0.1em;
+	display: block;
+}
 
-	select, textarea, input {
-		margin-left: 0.5em;
-	}
+select, textarea, input {
+	margin-left: 0.5em;
+}
 
-	.actions {
-		margin-left: 10em;
-	}
+.actions {
+	margin-left: 10em;
+}
 
-	br {
-		display: none;
-	}
+br {
+	display: none;
+}
 
-	fieldset {
-		background: #efe;
+fieldset {
+	background: #efe;
 
-	}
+}
 
-	legend {
-		color: #dfd;
-		background: #141;
-		font-family: sans-serif;
-		padding: 0.2em 1em;
-	}
+legend {
+	color: #dfd;
+	background: #141;
+	font-family: sans-serif;
+	padding: 0.2em 1em;
+}
+
+.locale {
+	float: right;
+	margin: -0.25em 0.1em;
+}

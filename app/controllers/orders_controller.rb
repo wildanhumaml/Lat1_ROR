@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
-  skip_before_action :authorize, only: [:new, :create]
   include CurrentCart
-  before_action :ensure_cart_isnt_empty, only: :new
+  skip_before_action :authorize, only: [:new, :create]
   before_action :set_cart, only: [:new, :create]
+  before_action :ensure_cart_isnt_empty, only: :new
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
@@ -36,7 +36,8 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        format.html { redirect_to store_index_url, notice: 'Thank you for your order.' }
+        format.html { redirect_to store_index_url(locale: I18n.locale), notice: I18n.t('.thanks') }
+        # format.html { redirect_to store_index_url, notice: 'Thank you for your order.' }
         # format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else
@@ -95,8 +96,8 @@ class OrdersController < ApplicationController
 
     private
       def ensure_cart_isnt_empty
-        # if @cart.line_items.nil?
-        #   redirect_to store_index_url, notice: 'Your cart is empty'
-        # end
+        if @cart.line_items.empty?
+          redirect_to store_index_url, notice: 'Your cart is empty'
+        end
     end
 end

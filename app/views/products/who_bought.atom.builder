@@ -19,12 +19,12 @@ atom_feed do |feed|
 						xhtml.tr do 
 							xhtml.do item.product.title
 							xhtml.do item.quantity
-							xhtml.do to_rupiah item.total_price
+							xhtml.do number_to_currency item.total_price
 						end
 					end
 					xhtml.tr do
 						xhtml.th 'total :', colspan: 2
-						xhtml.th to_rupiah \order.line_items.map(&:total_price).sum
+						xhtml.th number_to_currency \order.line_items.map(&:total_price).sum
 					end
 				end
 
