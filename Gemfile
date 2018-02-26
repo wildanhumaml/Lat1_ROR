@@ -2,18 +2,25 @@ source 'https://rubygems.org'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-# gem 'webpacker', '~> 3.2'
-# gem 'webpacker', github: 'rails/webpacker' 
 gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 gem 'foreman'
 gem 'bcrypt', '~> 3.1.7'
 gem 'i18n-js'
 
+group :production do
+  gem 'mysql2', '~> 0.4.0'
+end
+
+# Use Capistrano for deployment
+gem 'capistrano-rails', group: :development
+gem 'capistrano-rvm', group: :development
+gem 'capistrano-bundler', group: :development
+gem 'capistrano-passenger', group: :development
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
@@ -26,7 +33,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -37,10 +44,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# gem 'webpacker', '~> 3.2'
-# gem 'webpacker', '~> 2.0'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
