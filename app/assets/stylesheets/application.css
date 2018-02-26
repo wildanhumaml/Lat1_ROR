@@ -42,10 +42,10 @@ body, body > p, body > ol, body > li, body > ul, body > td {margin: 8px !importa
 }
 
 #main {
-			padding: 1em;
-			background: #ffffff;
-			flex: 1;
-		}
+	padding: 1em;
+	background: #ffffff;
+	flex: 1;
+}
 
 #notice:empty {
 	display: none;
@@ -57,45 +57,45 @@ body, body > p, body > ol, body > li, body > ul, body > td {margin: 8px !importa
 }
 
 #side {
-			padding: 1em 2em 1em 1em;
-			background: #141;
+	padding: 1em 2em 1em 1em;
+	background: #141;
+	color: #ffffff;
+	width: 25%;
+
+		form, div {
+			display: inline;
+		}
+
+		input {
+			font-size: small;
+		}
+
+		#cart {
+			font-size: smaller;
 			color: #ffffff;
-			width: 25%;
-
-			form, div {
-				display: inline;
+			
+			table {
+				border-top: 	1px dotted #595;
+				border-bottom: 	1px dotted #595;
+				margin-bottom: 	10px;
 			}
+		}
 
-			input {
+		ul {
+			padding: 0;
+
+		li {
+			list-style: none;
+			font-size: 14pt;
+			color: #ffffff;
+
+			a {
+				color: #ffffff;
 				font-size: small;
-			}
-
-			#cart {
-				font-size: smaller;
-				color: #ffffff;
-				
-				table {
-					border-top: 	1px dotted #595;
-					border-bottom: 	1px dotted #595;
-					margin-bottom: 	10px;
-				}
-			}
-
-			ul {
-				padding: 0;
-
-			li {
-				list-style: none;
-				font-size: 14pt;
-				color: #ffffff;
-
-				a {
-					color: #ffffff;
-					font-size: small;
-				}
 			}
 		}
 	}
+}
 
 @media all and (max-width: 600px) {
 	#columns {

@@ -1,4 +1,4 @@
-include RupiahHelper
+# include RupiahHelper
 
 class StoreController < ApplicationController
   skip_before_action :authorize
