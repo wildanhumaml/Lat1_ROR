@@ -1,8 +1,8 @@
 # include RupiahHelper
 
 class StoreController < ApplicationController
-  skip_before_action :authorize
   include CurrentCart
+  skip_before_action :authorize
   before_action :set_cart
   def index
   	if params[:set_locale]
