@@ -1,5 +1,5 @@
 class OrderNotifierMailer < ApplicationMailer
-  default from: 'Sam Ruby <depot@example.com>'
+  default from: 'Wildan Humam <wildan@41studio.com>'
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -9,7 +9,7 @@ class OrderNotifierMailer < ApplicationMailer
     # @greeting = "Hi"
     # mail to: "to@example.org"
     @order = order
-    mail(to: order.email, subject: "Pragmatic Store Order Confirmation")
+    mail to: order.email, subject: 'Pragmatic Store Order Confirmation'
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -17,10 +17,10 @@ class OrderNotifierMailer < ApplicationMailer
   #
   #   en.order_notifier_mailer.shipped.subject
   #
-  def shipped
+  def shipped(order)
     # @greeting = "Hi"
     # mail to: "to@example.org"
     @order = order
-    mail(to: order.email, subject: "Pragmatic Store Order Shipped")
+    mail to: order.email, subject: 'Pragmatic Store Order Shipped'
   end
 end

@@ -7,6 +7,3 @@
 	<td><%= line_item.product.title %> <br/>(@<%= number_to_currency(line_item.product.price) %>)</td>
 	<td class="item_price" valign="top"><%= number_to_currency(line_item.total_price) %></td>
 </tr>
-<%= sprintf("%2d x %s",
-        line_item.quantity,
-        truncate(line_item.product.title, length: 50)) %>

@@ -36,7 +36,7 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        OrderNotifierMailer.received(@order).deliver_now
+        OrderNotifierMailer.received(@order).deliver
         format.html { redirect_to store_index_url(locale: I18n.locale), notice: I18n.t('.thanks') }
         # format.html { redirect_to store_index_url, notice: 'Thank you for your order.' }
         # format.html { redirect_to @order, notice: 'Order was successfully created.' }

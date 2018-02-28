@@ -1,5 +1,15 @@
-<h1>OrderNotifier#received</h1>
+<h1>OrderNotifier#received | Test</h1>
 
-<p>
-  <%= @greeting %>, find me in app/views/order_notifier_mailer/received.html.erb
-</p>
+Dear <b><%= @order.name %></b>
+
+Thank you for your recent order from The Pragmatic Store.
+
+You ordered the following items:
+
+<br/> <hr/>
+<b><i><%= render @order.line_items %></i></b>
+<br/> 
+<h3>Total Pembayaran : </h3> Hitung sendiri
+<hr/>
+
+We'll send you a separate e-mail when your order ships.

@@ -15,6 +15,23 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+  # Function SMTP mail
+  Lat1ROR::Application.configure do
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.default :charset => "utf-8"
+    
+    config.action_mailer.smtp_settings = {
+      address:                "smtp.gmail.com",
+      port:                   587,
+      domain:                 "smtp.gmail.com",
+      authentication:         "login",
+      user_name:              "wildan@41studio.com",
+      password:               "@dancromanzer911",
+      enable_starttls_auto:   true
+    }
+  end
+
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
@@ -50,22 +67,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  # Function SMTP mail
-  # Lat1ROR::Application.configure do
-    config.action_mailer.delivery_method = :smtp
-    
-    config.action_mailer.smtp_settings = {
-      address: "41studio.gmail.com",
-      port: 587,
-      domain: "example.com",
-      authentication: "plain",
-      enable_starttls_auto: true,
-      user_name: ENV["Wildan Humam Lestiono"],
-      password: ENV["@dancromanzer911"]
-    }
-  # end
 
-  config.action_mailer.default_url_options = { host: "localhost:3000" }
+  # config.action_mailer.default_url_options = { host: "localhost:3000" }
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
