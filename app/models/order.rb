@@ -15,4 +15,22 @@ class Order < ApplicationRecord
 		end
 	end
 
+	def tes
+	 puts	"test"
+	end
+
+	def total_bayar
+		harga = 0
+		total	= 0
+		check = LineItem.last
+		ls = LineItem.where("order_id = #{check.order_id}")
+		ls.each do |l|
+			sr = Product.where("id = #{l.product_id}")
+			sr.each do |pp|
+				harga = pp.price * l.quantity
+				total += harga
+				end
+			end
+			total
+		end
 end

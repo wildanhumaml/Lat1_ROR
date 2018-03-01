@@ -1,0 +1,2 @@
+class Disount < ApplicationRecord
+end

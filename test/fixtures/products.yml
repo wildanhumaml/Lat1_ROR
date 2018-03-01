@@ -3,13 +3,13 @@
 one:
   title: MyString
   description: MyText
-  image_url: lorem.jpg
+  image_url: http://www.unixstickers.com/image/cache/data/stickers/rails/rails-new.sh-600x600.png
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_url: lorem.jpg
+  image_url: http://www.unixstickers.com/image/cache/data/stickers/rails/rails-new.sh-600x600.png
   price: 9.99
 
 ruby:
@@ -18,5 +18,5 @@ ruby:
     Ruby is the fastest growing and most exciting dynamic
     language out there. If you need to get working programs
     delivered fast, you should add Ruby to your toolbox.
-  image_url: ruby.png
+  image_url: http://www.unixstickers.com/image/cache/data/stickers/rails/rails-new.sh-600x600.png
   price: 49.50
