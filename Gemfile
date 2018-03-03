@@ -46,7 +46,6 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 group :production do
-  gem 'pg'
   gem 'mysql2', '~> 0.4.0'
   gem 'rails_12factor'
 end
