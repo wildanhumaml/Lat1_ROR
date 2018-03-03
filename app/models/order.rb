@@ -34,3 +34,4 @@ class Order < ApplicationRecord
 			total
 		end
 end
+
