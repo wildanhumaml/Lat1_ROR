@@ -48,6 +48,11 @@ gem 'bcrypt', '~> 3.1.7'
 group :production do
   gem 'pg'
   gem 'mysql2', '~> 0.4.0'
+  gem 'rails_12factor'
+end
+
+group :development do
+  gem 'sqlite3'
 end
 
 group :development, :test do
@@ -56,7 +61,6 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'sqlite3'
 end
 
 group :development do
