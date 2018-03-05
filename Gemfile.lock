@@ -91,6 +91,9 @@ GEM
     concurrent-ruby (1.0.5)
     crass (1.0.3)
     erubi (1.7.0)
+    exception_notification (4.2.2)
+      actionmailer (>= 4.0, < 6)
+      activesupport (>= 4.0, < 6)
     execjs (2.7.0)
     ffi (1.9.22)
     foreman (0.84.0)
@@ -125,13 +128,13 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
-    mysql2 (0.4.10)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
     nio4r (2.2.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    pg (1.0.0)
     public_suffix (3.0.2)
     puma (3.11.2)
     rack (2.0.4)
@@ -240,13 +243,14 @@ DEPENDENCIES
   capistrano-rvm
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  exception_notification
   foreman
   i18n-js
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
   listen (>= 3.0.5, < 3.2)
-  mysql2 (~> 0.4.0)
+  pg
   puma (~> 3.7)
   rails (~> 5.1.4)
   rails_12factor
